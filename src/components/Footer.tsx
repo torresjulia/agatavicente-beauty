@@ -20,8 +20,7 @@ export default function Footer() {
             </div>
             <div className="gold-divider w-24 mb-4" />
             <p className="font-raleway text-sm text-white/65 leading-relaxed max-w-xs font-light">
-              Referência em sobrancelhas, brow lamination e lash lifting em São Paulo.
-              Beleza sofisticada para mulheres que sabem o que querem.
+              Referência em Extensão de Cílios, Desing de Sobrancelhas, Lash Lifting e Brow Lamination em Mogi Mirim-SP. Beleza sofisticada para mulheres que sabem o que querem.
             </p>
             {/* Social icons */}
             <div className="flex gap-4 mt-6">
@@ -50,7 +49,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href={`https://wa.me/5511999999999`}
+                href="https://wa.me/message/J6BWH3D6F3TQC1"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp da Agata Vicente Beauty"

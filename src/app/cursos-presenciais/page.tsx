@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Cursos presenciais de Extensão de Cílios, Design de Sobrancelhas, Lash Lifting e Brow Lamination. Formação completa com diploma, kit de materiais e suporte da especialista Agata Vicente.',
 }
 
-const WA_NUMBER = '5511999999999'
+const WHATSAPP_HREF = 'https://wa.me/message/J6BWH3D6F3TQC1'
 
 const cursos = [
   {
@@ -78,7 +78,6 @@ const cursos = [
     incluso: [
       'Apostila Completa',
       'Diploma',
-      'Kit com materiais iniciantes',
       'Coffee Break',
       'Aula teórica e prática',
       'Aplicação do zero em modelo',
@@ -105,7 +104,6 @@ const cursos = [
     incluso: [
       'Apostila Completa',
       'Diploma',
-      'Kit com materiais iniciantes',
       'Coffee Break',
       'Aula teórica e prática',
       'Aplicação do zero em modelo',
@@ -214,7 +212,7 @@ export default function CursosPresenciaisPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {cursos.map((curso) => {
-                const waHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(curso.waMsg)}`
+                const waHref = WHATSAPP_HREF
                 return (
                   <div
                     key={curso.id}
@@ -338,7 +336,7 @@ export default function CursosPresenciaisPage() {
               {[
                 { icon: '📖', label: 'Apostila Completa' },
                 { icon: '🏅', label: 'Diploma' },
-                { icon: '🎁', label: 'Kit de Materiais' },
+                //{ icon: '🎁', label: 'Kit de Materiais' },
                 { icon: '☕', label: 'Coffee Break' },
                 { icon: '🪞', label: 'Prática em Modelo Real' },
                 { icon: '📲', label: 'Suporte pós-curso' },
@@ -432,7 +430,7 @@ export default function CursosPresenciaisPage() {
               As turmas são pequenas para garantir atenção individualizada.
             </p>
             <a
-              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site e tenho interesse nos cursos presenciais. Gostaria de saber mais!')}`}
+              href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#25D366] text-white font-raleway text-sm tracking-[0.1em] uppercase px-10 py-4 hover:bg-[#20b85a] transition-colors"

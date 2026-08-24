@@ -1,23 +1,5 @@
 const servicos = [
   {
-    titulo: 'Design de Sobrancelha',
-    descricao:
-      'Mapeamento facial preciso e modelagem personalizada para realçar sua expressão natural. Inclui higienização, design e acabamento.',
-    categoria: 'Sobrancelhas',
-    destaque: false,
-    emoji: '✦',
-    waMsg: 'Olá! Vim pelo site e gostaria de agendar um Design de Sobrancelha!',
-  },
-  {
-    titulo: 'Brow Lamination',
-    descricao:
-      'Técnica que alinha, levanta e fixa os fios naturais da sobrancelha, criando um efeito fuller brow denso e estruturado por até 8 semanas.',
-    categoria: 'Sobrancelhas',
-    destaque: true,
-    emoji: '◈',
-    waMsg: 'Olá! Vim pelo site e gostaria de agendar uma Brow Lamination!',
-  },
-  {
     titulo: 'Lash Lifting',
     descricao:
       'Curvatura permanente nos cílios naturais que elimina a necessidade de curvex e máscara. Olhar aberto e expressivo por até 8 semanas.',
@@ -31,9 +13,27 @@ const servicos = [
     descricao:
       'Aplicação fio a fio para um olhar mais volumoso e alongado, preservando a saúde dos cílios naturais. Resultado duradouro e personalizável.',
     categoria: 'Cílios',
-    destaque: false,
+    destaque: true,
     emoji: '❋',
     waMsg: 'Olá! Vim pelo site e gostaria de agendar uma Extensão de Cílios!',
+  },
+  {
+    titulo: 'Design de Sobrancelha',
+    descricao:
+      'Mapeamento facial preciso e modelagem personalizada para realçar sua expressão natural. Realizado com ou sem henna e tintura, conforme o resultado que você busca. Inclui higienização, design e acabamento.',
+    categoria: 'Sobrancelhas',
+    destaque: false,
+    emoji: '✦',
+    waMsg: 'Olá! Vim pelo site e gostaria de agendar um Design de Sobrancelha!',
+  },
+  {
+    titulo: 'Brow Lamination',
+    descricao:
+      'Técnica que alinha, levanta e fixa os fios naturais da sobrancelha, criando um efeito fuller brow denso e estruturado por até 8 semanas.',
+    categoria: 'Sobrancelhas',
+    destaque: false,
+    emoji: '◈',
+    waMsg: 'Olá! Vim pelo site e gostaria de agendar uma Brow Lamination!',
   },
 ]
 
@@ -60,7 +60,7 @@ export default function ServicosSection() {
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {servicos.map((s) => {
-            const waHref = `https://wa.me/message/J6BWH3D6F3TQC1`
+            const waHref = 'https://wa.me/message/J6BWH3D6F3TQC1'
             return (
               <div
                 key={s.titulo}

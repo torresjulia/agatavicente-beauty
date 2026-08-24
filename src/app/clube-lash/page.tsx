@@ -229,7 +229,7 @@ export default function ClubeLashPage() {
               Fale comigo pelo WhatsApp e tire todas as suas dúvidas antes de assinar.
             </p>
             <a
-              href={`https://wa.me/message/J6BWH3D6F3TQC1`}
+              href="https://wa.me/message/J6BWH3D6F3TQC1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white font-raleway text-sm tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#20b85a] transition-colors"

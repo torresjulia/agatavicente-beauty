@@ -1,8 +1,7 @@
-const WA_NUMBER = '5511999999999'
-const WA_MESSAGE = 'Olá! Vim pelo site e gostaria de agendar um horário!'
+const WHATSAPP_HREF = 'https://wa.me/message/J6BWH3D6F3TQC1'
 
 export default function ContatoSection() {
-  const whatsappHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`
+  const whatsappHref = WHATSAPP_HREF
 
   return (
     <section id="contato" className="py-24 bg-[#0a0a0a] relative overflow-hidden">

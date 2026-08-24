@@ -333,7 +333,7 @@ export default function ProdutosDigitaisPage() {
               material certo para o seu momento.
             </p>
             <a
-              href={`https://wa.me/5511999999999?text=${encodeURIComponent('Olá! Tenho interesse nos produtos digitais e gostaria de tirar algumas dúvidas!')}`}
+              href="https://wa.me/message/J6BWH3D6F3TQC1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white font-raleway text-sm tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#20b85a] transition-colors"

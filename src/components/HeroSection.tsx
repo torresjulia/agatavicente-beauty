@@ -1,8 +1,7 @@
-const WA_NUMBER = '5511999999999'
-const WA_MESSAGE = 'Olá! Vim pelo site e gostaria de agendar um horário!'
+const WHATSAPP_HREF = 'https://wa.me/message/J6BWH3D6F3TQC1'
 
 export default function HeroSection() {
-  const whatsappHref = `https://wa.me/message/J6BWH3D6F3TQC1`
+  const whatsappHref = WHATSAPP_HREF
 
   return (
     <section

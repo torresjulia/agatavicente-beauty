@@ -1,64 +1,99 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-type Categoria = 'Todos' | 'Sobrancelhas' | 'Brow Lamination' | 'Lash Lifting'
+type Categoria =
+  | 'Todos'
+  | 'Sobrancelhas'
+  | 'Extensão de Cílios'
+  | 'Brow Lamination'
+  | 'Lash Lifting'
 
 const fotos = [
   {
-    url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80',
-    alt: 'Design de sobrancelha perfeito',
+    url: '/images/sobrancelha1.jpeg',
+    alt: 'Design de sobrancelha com henna e tintura — antes e depois',
     categoria: 'Sobrancelhas',
   },
   {
-    url: 'https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=600&q=80',
-    alt: 'Design e modelagem de sobrancelha',
+    url: '/images/sobrancelha2.jpeg',
+    alt: 'Design de sobrancelha sem henna — modelagem natural e definida',
     categoria: 'Sobrancelhas',
   },
   {
-    url: 'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&q=80',
-    alt: 'Sobrancelha definida e natural',
-    categoria: 'Sobrancelhas',
+    url: '/images/cilios1.jpeg',
+    alt: 'Extensão de cílios com curvatura elegante e efeito sofisticado',
+    categoria: 'Extensão de Cílios',
   },
   {
-    url: 'https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&q=80',
-    alt: 'Brow lamination — fios alinhados e cheios',
+    url: '/images/cilios2.jpeg',
+    alt: 'Extensão de cílios com acabamento leve, alinhado e delicado',
+    categoria: 'Extensão de Cílios',
+  },
+  {
+    url: '/images/cilios3.jpeg',
+    alt: 'Extensão de cílios com definição suave e olhar iluminado',
+    categoria: 'Extensão de Cílios',
+  },
+  {
+    url: '/images/cilios4.jpeg',
+    alt: 'Extensão de cílios com volume marcante e efeito glamouroso',
+    categoria: 'Extensão de Cílios',
+  },
+  {
+    url: '/images/brow1.jpeg',
+    alt: 'Brow lamination — fios alinhados e efeito fuller brow',
     categoria: 'Brow Lamination',
   },
   {
-    url: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80',
-    alt: 'Brow lamination resultado natural',
+    url: '/images/brow2.jpeg',
+    alt: 'Brow lamination — resultado cheio e estruturado',
     categoria: 'Brow Lamination',
   },
   {
-    url: 'https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&q=80',
-    alt: 'Brow lamination efeito fuller brow',
-    categoria: 'Brow Lamination',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1601412436009-d964bd02edbc?w=600&q=80',
-    alt: 'Lash lifting — curvatura natural dos cílios',
+    url: '/images/lashlifting1.jpeg',
+    alt: 'Lash lifting — curvatura natural e olhar expressivo',
     categoria: 'Lash Lifting',
   },
   {
-    url: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=600&q=80',
-    alt: 'Lash lifting olhar expressivo',
-    categoria: 'Lash Lifting',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?w=600&q=80',
-    alt: 'Lash lifting resultado duradouro',
+    url: '/images/lashlifting2.jpeg',
+    alt: 'Lash lifting — cílios curvados e definidos',
     categoria: 'Lash Lifting',
   },
 ]
 
-const categorias: Categoria[] = ['Todos', 'Sobrancelhas', 'Brow Lamination', 'Lash Lifting']
+const categorias: Categoria[] = [
+  'Todos',
+  'Sobrancelhas',
+  'Extensão de Cílios',
+  'Brow Lamination',
+  'Lash Lifting',
+]
 
 export default function CatalogoSection() {
   const [ativa, setAtiva] = useState<Categoria>('Todos')
+  const [fotoAtiva, setFotoAtiva] = useState<(typeof fotos)[number] | null>(null)
 
   const fotosFiltradas =
     ativa === 'Todos' ? fotos : fotos.filter((f) => f.categoria === ativa)
+
+  useEffect(() => {
+    if (!fotoAtiva) return
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setFotoAtiva(null)
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [fotoAtiva])
 
   return (
     <section id="catalogo" className="py-24 bg-[#0a0a0a]">
@@ -73,6 +108,10 @@ export default function CatalogoSection() {
             <em className="gradient-rose-gold not-italic">uma história</em>
           </h2>
           <div className="gold-divider max-w-32 mx-auto mt-6" />
+          <p className="font-raleway text-sm text-white/70 max-w-2xl mx-auto mt-6 leading-relaxed font-light">
+            No design de sobrancelhas, você escolhe o acabamento: com henna e tintura para mais
+            definição, ou apenas a modelagem para um visual mais natural.
+          </p>
         </div>
 
         {/* Filter buttons */}
@@ -100,9 +139,12 @@ export default function CatalogoSection() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {fotosFiltradas.map((foto, i) => (
-            <div
+            <button
+              type="button"
               key={`${foto.categoria}-${i}`}
+              onClick={() => setFotoAtiva(foto)}
               className="relative aspect-[4/5] overflow-hidden group cursor-pointer"
+              aria-label={`Ampliar imagem: ${foto.alt}`}
             >
               <img
                 src={foto.url}
@@ -138,10 +180,25 @@ export default function CatalogoSection() {
                   {foto.categoria}
                 </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
+
+      {fotoAtiva && (
+        <button
+          type="button"
+          className="fixed inset-0 z-[100] bg-black/92 flex items-center justify-center p-4 sm:p-6 cursor-zoom-out"
+          onClick={() => setFotoAtiva(null)}
+          aria-label="Fechar imagem ampliada"
+        >
+          <img
+            src={fotoAtiva.url}
+            alt={fotoAtiva.alt}
+            className="max-w-full max-h-full object-contain"
+          />
+        </button>
+      )}
     </section>
   )
 }

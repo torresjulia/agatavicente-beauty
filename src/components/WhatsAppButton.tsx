@@ -1,8 +1,7 @@
-const WA_NUMBER = '5511999999999'
-const WA_MESSAGE = 'Olá! Vim pelo site e gostaria de agendar um horário!'
+const WHATSAPP_HREF = 'https://wa.me/message/J6BWH3D6F3TQC1'
 
 export default function WhatsAppButton() {
-  const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`
+  const href = WHATSAPP_HREF
 
   return (
     <a
