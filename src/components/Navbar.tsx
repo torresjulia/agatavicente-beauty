@@ -72,6 +72,12 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
+              href="/cursos-presenciais"
+              className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-2 border border-white/20 text-white/80 hover:bg-white hover:text-[#0a0a0a] transition-all duration-200 rounded-none"
+            >
+              Cursos Presenciais
+            </Link>
+            <Link
               href="/clube-lash"
               className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-2 border border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a0a0a] transition-all duration-200 rounded-none"
             >
@@ -132,6 +138,13 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex flex-col gap-3 mt-4">
+            <Link
+              href="/cursos-presenciais"
+              onClick={() => setMenuOpen(false)}
+              className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-3 border border-white/20 text-white/80 text-center hover:bg-white hover:text-[#0a0a0a] transition-all duration-200"
+            >
+              Cursos Presenciais
+            </Link>
             <Link
               href="/clube-lash"
               onClick={() => setMenuOpen(false)}

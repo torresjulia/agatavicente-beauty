@@ -2,7 +2,7 @@ const WA_NUMBER = '5511999999999'
 const WA_MESSAGE = 'Olá! Vim pelo site e gostaria de agendar um horário!'
 
 export default function HeroSection() {
-  const whatsappHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`
+  const whatsappHref = `https://wa.me/message/J6BWH3D6F3TQC1`
 
   return (
     <section
@@ -29,8 +29,8 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <p className="font-raleway text-base sm:text-lg text-white/82 max-w-2xl mx-auto mb-10 leading-relaxed font-light tracking-wide">
-          Referência em design de sobrancelhas, brow lamination e lash lifting.
-          Transformamos o seu olhar com técnica, cuidado e exclusividade.
+          Realçamos a beleza do seu olhar.
+          Somos especialistas em embelezamento do olhar, com técnicas que unem precisão, cuidado e exclusividade. Extensão de Cílios, Design de Sobrancelhas, Brow Lamination e Lash Lifting para valorizar a sua beleza e revelar a sua melhor versão.
         </p>
 
         {/* CTA Buttons */}

@@ -104,6 +104,14 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
+                  href="/cursos-presenciais"
+                  className="font-raleway text-sm text-white/65 hover:text-[#d4a0a0] transition-colors"
+                >
+                  Cursos Presenciais
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/clube-lash"
                   className="font-raleway text-sm text-white/65 hover:text-[#d4a0a0] transition-colors"
                 >

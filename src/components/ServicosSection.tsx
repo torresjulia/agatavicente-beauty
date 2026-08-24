@@ -1,11 +1,8 @@
-const WA_NUMBER = '5511999999999'
-
 const servicos = [
   {
     titulo: 'Design de Sobrancelha',
     descricao:
       'Mapeamento facial preciso e modelagem personalizada para realçar sua expressão natural. Inclui higienização, design e acabamento.',
-    preco: 'Consultar',
     categoria: 'Sobrancelhas',
     destaque: false,
     emoji: '✦',
@@ -15,7 +12,6 @@ const servicos = [
     titulo: 'Brow Lamination',
     descricao:
       'Técnica que alinha, levanta e fixa os fios naturais da sobrancelha, criando um efeito fuller brow denso e estruturado por até 8 semanas.',
-    preco: 'Consultar',
     categoria: 'Sobrancelhas',
     destaque: true,
     emoji: '◈',
@@ -25,11 +21,19 @@ const servicos = [
     titulo: 'Lash Lifting',
     descricao:
       'Curvatura permanente nos cílios naturais que elimina a necessidade de curvex e máscara. Olhar aberto e expressivo por até 8 semanas.',
-    preco: 'Consultar',
     categoria: 'Cílios',
     destaque: false,
     emoji: '✧',
     waMsg: 'Olá! Vim pelo site e gostaria de agendar um Lash Lifting!',
+  },
+  {
+    titulo: 'Extensão de Cílios',
+    descricao:
+      'Aplicação fio a fio para um olhar mais volumoso e alongado, preservando a saúde dos cílios naturais. Resultado duradouro e personalizável.',
+    categoria: 'Cílios',
+    destaque: false,
+    emoji: '❋',
+    waMsg: 'Olá! Vim pelo site e gostaria de agendar uma Extensão de Cílios!',
   },
 ]
 
@@ -54,9 +58,9 @@ export default function ServicosSection() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {servicos.map((s) => {
-            const waHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(s.waMsg)}`
+            const waHref = `https://wa.me/message/J6BWH3D6F3TQC1`
             return (
               <div
                 key={s.titulo}
@@ -98,20 +102,17 @@ export default function ServicosSection() {
 
                 {/* Price + CTA */}
                 <div className="flex items-center justify-between">
-                  <span className="font-cormorant text-2xl text-[#c9a84c] font-light">
-                    {s.preco}
-                  </span>
                   <a
                     href={waHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`font-raleway text-xs tracking-[0.1em] uppercase px-4 py-2 transition-all duration-200 ${
+                    className={`font-raleway text-xs tracking-[0.1em] uppercase px-4 py-2 transition-all duration-200 w-full text-center ${
                       s.destaque
                         ? 'bg-gradient-to-r from-[#d4a0a0] to-[#c9a84c] text-[#0a0a0a] hover:opacity-90'
                         : 'border border-[#c9a84c]/40 text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a0a0a]'
                     }`}
                   >
-                    Agendar
+                    Agendar pelo WhatsApp
                   </a>
                 </div>
               </div>

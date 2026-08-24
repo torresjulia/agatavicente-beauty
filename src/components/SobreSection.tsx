@@ -1,3 +1,6 @@
+import QuemSou from '../../public/quem-sou.jpeg'
+
+
 const diferenciais = [
   {
     icon: '✦',
@@ -44,7 +47,7 @@ export default function SobreSection() {
           <div className="relative">
             <div className="aspect-[3/4] bg-gradient-to-br from-[#1a1010] to-[#0a0a0a] border border-[#c9a84c]/20 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80"
+                src={QuemSou.src}
                 alt="Agata Vicente — profissional de beleza"
                 className="w-full h-full object-cover opacity-80 mix-blend-luminosity"
                 loading="lazy"
@@ -71,18 +74,16 @@ export default function SobreSection() {
             </h2>
             <div className="gold-divider mb-8" />
             <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
-              Sou Agata Vicente, especialista em design de sobrancelhas, brow lamination e lash
-              lifting. Com mais de 5 anos dedicados ao universo da beleza, construí meu trabalho
-              sobre três pilares: técnica, cuidado e resultado.
+              Sou Ágata Vicente, especialista em Extensão de Cílios, Design de Sobrancelhas, Brow Lamination e Lash Lifting. Há mais de 5 anos, dedico meu trabalho ao universo da beleza, construindo uma trajetória pautada em três pilares: técnica, cuidado e resultado.
             </p>
             <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
-              Cada procedimento é realizado com atenção minuciosa ao detalhe, respeitando as
-              características únicas de cada cliente. Não existe resultado genérico — existe o
-              resultado certo para o <em className="text-[#d4a0a0]">seu rosto, seus olhos, sua essência.</em>
+              Cada procedimento é realizado de forma personalizada e com atenção minuciosa aos detalhes, respeitando as características únicas de cada cliente. Não acredito em resultados genéricos, acredito no resultado ideal para o seu rosto, o seu olhar e a sua essência.
             </p>
-            <p className="font-raleway text-white/82 leading-relaxed font-light">
-              Atendo em estúdio privativo, com agenda exclusiva e insumos importados de primeira
-              linha. Porque quem investe em si merece o melhor.
+            <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
+              Meu atendimento acontece em estúdio privativo, com agenda exclusiva e insumos importados de alta qualidade, proporcionando uma experiência segura, sofisticada e personalizada.
+            </p>
+            <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
+              Porque investir em si é escolher se cuidar, e você merece o melhor.
             </p>
           </div>
         </div>
