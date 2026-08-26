@@ -6,64 +6,78 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Clube Lash 🐆 — Beleza com Exclusividade',
   description:
-    'Faça parte do Clube Lash e tenha acesso a descontos exclusivos, prioridade no agendamento, brindes mensais e novidades em primeira mão. Beleza premium por assinatura.',
+    'Faça parte do Clube Lash e tenha acesso a descontos exclusivos, prioridade no agendamento, brindes e novidades em primeira mão. Beleza premium por assinatura.',
 }
 
 const planos = [
   {
     nome: 'Plano Onça',
-    preco: 'R$ 79',
+    preco: 'R$ 250',
     periodo: '/mês',
-    descricao: 'Para quem quer começar a viver a experiência premium.',
+    descricao: 'Cílios impecáveis toda semana, com horário reservado só pra você.',
     beneficios: [
-      '10% de desconto em todos os serviços',
-      'Agendamento prioritário',
-      '1 brinde por mês',
+      'Uma manutenção por semana na extensão de cílios da sua preferência (exceto volumes exuberantes do catálogo)',
+      'Agendamento prioritário com horário fixo',
+      'Brindes exclusivos do Clube',
       'Acesso antecipado a promoções',
     ],
     destaque: false,
     cta: 'Assinar Plano Onça',
+    link: 'https://invoice.infinitepay.io/plans/agatabeauty/UkW71ij9Sd',
   },
   {
     nome: 'Plano Lash Gold',
-    preco: 'R$ 149',
+    preco: 'R$ 350',
     periodo: '/mês',
-    descricao: 'O plano favorito das clientes mais assíduas.',
+    descricao: 'Colocação mensal, manutenções semanais e remoções inclusas — o cuidado completo.',
     beneficios: [
-      '20% de desconto em todos os serviços',
-      'Agendamento prioritário VIP',
-      '2 brindes por mês',
-      'Acesso antecipado a novas técnicas',
-      '1 serviço surpresa por trimestre',
-      'Convite para eventos exclusivos',
+      'Uma colocação mensal de extensão de cílios da sua escolha (exceto volumes exuberantes do catálogo)',
+      'Manutenções semanais',
+      'Remoções inclusas',
+      'Agendamento prioritário com horário fixo',
+      'Brindes exclusivos do Clube',
+      'Acesso antecipado a promoções',
     ],
     destaque: true,
     cta: 'Assinar Plano Gold',
+    link: 'https://invoice.infinitepay.io/plans/agatabeauty/6rhptpxt4I',
   },
   {
     nome: 'Plano Black',
-    preco: 'R$ 249',
+    preco: 'R$ 420',
     periodo: '/mês',
-    descricao: 'Experiência máxima para quem não abre mão do melhor.',
+    descricao: 'Atendimento VIP com o catálogo completo — cílios, sobrancelhas e troca mensal inclusos.',
     beneficios: [
-      '30% de desconto em todos os serviços',
-      'Agenda reservada (horários exclusivos)',
-      '3 brindes premium por mês',
-      'Acesso antecipado a todos os lançamentos',
-      '1 serviço completo grátis/trimestre',
-      'Atendimento prioritário via WhatsApp',
-      'Presente especial no aniversário',
+      'Atendimento VIP',
+      'Uma colocação mensal de extensão de cílios da sua escolha — qualquer modelo do catálogo',
+      'Manutenções semanais',
+      'Remoções inclusas',
+      'Uma troca mensal: extensão por lash lifting (ou vice-versa)',
+      'Uma Brow Lamination mensal',
+      'Um design de sobrancelha mensal (com ou sem henna/tintura)',
+      'Agendamento prioritário com horário fixo',
+      'Brindes exclusivos do Clube',
+      'Acesso antecipado a promoções',
     ],
     destaque: false,
     cta: 'Assinar Plano Black',
+    link: 'https://invoice.infinitepay.io/plans/agatabeauty/TmrqvoBwqf',
   },
+]
+
+const avisosPlanos = [
+  'Os procedimentos não são cumulativos e a falta não será reembolsada.',
+  'Plano Onça: inclui apenas manutenções; novas colocações e remoções são cobradas à parte.',
+  'Plano Black: inclui todos os serviços exclusivos do catálogo.',
+  'Assinatura recorrente no cartão de crédito — não consome o limite do cartão.',
+  'Em caso de atraso, aplica-se taxa de multa de R$ 8,90.',
 ]
 
 const beneficiosGerais = [
   {
     icon: '🐆',
-    titulo: 'Desconto Exclusivo',
-    texto: 'De 10% a 30% em todos os serviços do estúdio, válido durante a assinatura ativa.',
+    titulo: 'Descontos Especiais',
+    texto: 'Descontos de até 30% em serviços de acordo com o plano que preferir.',
   },
   {
     icon: '📅',
@@ -72,8 +86,8 @@ const beneficiosGerais = [
   },
   {
     icon: '🎁',
-    titulo: 'Brindes Mensais',
-    texto: 'Todo mês uma surpresa especial: produtos de beleza, acessórios e muito mais.',
+    titulo: 'Brindes exclusivos',
+    texto: 'Produtos de beleza, acessórios e muito mais.',
   },
   {
     icon: '✨',
@@ -198,7 +212,7 @@ export default function ClubeLashPage() {
                   </ul>
 
                   <a
-                    href="#"
+                    href={plano.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`font-raleway text-xs tracking-[0.12em] uppercase px-6 py-3 text-center transition-all duration-200 ${
@@ -213,9 +227,16 @@ export default function ClubeLashPage() {
               ))}
             </div>
 
-            <p className="text-center font-raleway text-xs text-white/75 mt-8">
-              * Assinatura mensal recorrente. Cancele a qualquer momento sem burocracia.
-            </p>
+            <div className="max-w-2xl mx-auto mt-10 space-y-2 text-center">
+              {avisosPlanos.map((aviso) => (
+                <p
+                  key={aviso}
+                  className="font-raleway text-[11px] text-white/45 leading-relaxed font-light"
+                >
+                  * {aviso}
+                </p>
+              ))}
+            </div>
           </div>
         </section>
 

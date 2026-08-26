@@ -152,9 +152,16 @@ export default function CursosPresenciaisPage() {
       <main className="bg-[#0a0a0a] min-h-screen">
 
         {/* ── Hero ── */}
-        <section className="relative pt-32 pb-20 overflow-hidden leopard-bold">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/85 via-[#0a0a0a]/60 to-[#0a0a0a]/95 pointer-events-none z-[1]" />
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+          <img
+            src="/images/agata-curso.jpeg"
+            alt="Ágata Vicente — instrutora dos cursos presenciais"
+            className="absolute inset-0 w-full h-full object-cover object-[center_18%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/55 to-[#0a0a0a] pointer-events-none z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/50 via-transparent to-[#0a0a0a]/50 pointer-events-none z-[1]" />
+
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-32 pb-20">
             <span className="inline-block font-raleway text-xs tracking-[0.4em] uppercase text-[#c9a84c] mb-6">
               Formação Presencial
             </span>

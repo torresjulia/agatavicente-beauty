@@ -17,7 +17,7 @@ const depoimentos = [
     nome: 'Mariana Santos',
     servico: 'Lash Lifting',
     texto:
-      'O lash lifting mudou minha rotina de manhã. Acordo com os cílios curvados e o olhar aberto sem fazer absolutamente nada. Durou mais de 7 semanas. Simplesmente incrível.',
+      'O lash lifting mudou minha rotina de manhã. Acordo com os cílios alongados e pigmentados, sem curvex nem máscara. Simplesmente incrível.',
     avatar: 'https://ui-avatars.com/api/?name=Mariana+Santos&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
   },
   {

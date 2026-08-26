@@ -2,7 +2,7 @@ const servicos = [
   {
     titulo: 'Lash Lifting',
     descricao:
-      'Curvatura permanente nos cílios naturais que elimina a necessidade de curvex e máscara. Olhar aberto e expressivo por até 8 semanas.',
+      'Rímel permanente nos cílios naturais que elimina a necessidade de curvex e máscara. Cílios alongados e pigmentados por 20 a 30 dias.',
     categoria: 'Cílios',
     destaque: false,
     emoji: '✧',

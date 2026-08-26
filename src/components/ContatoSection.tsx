@@ -57,7 +57,7 @@ export default function ContatoSection() {
                 Instagram
               </p>
               <a
-                href="https://instagram.com/agatavicente.beauty"
+                href="https://instagram.com/agatavicentebeauty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-raleway text-sm text-white/82 hover:text-[#d4a0a0] transition-colors"
@@ -78,7 +78,7 @@ export default function ContatoSection() {
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
-                @agatavicente.beauty
+                @agatavicentebeauty
               </a>
             </div>
           </div>
@@ -105,9 +105,9 @@ export default function ContatoSection() {
               </p>
               <div className="space-y-2">
                 {[
-                  { dia: 'Segunda — Sexta', hora: '9h às 19h' },
-                  { dia: 'Sábado', hora: '9h às 17h' },
-                  { dia: 'Domingo', hora: 'Fechado' },
+                  { dia: 'Terça — Sexta', hora: '9h às 19h' },
+                  { dia: 'Sábado', hora: '9h às 16h' },
+                  { dia: 'Domingo e Segunda', hora: 'Fechado' },
                 ].map((h) => (
                   <div key={h.dia} className="flex justify-between items-center">
                     <span className="font-raleway text-sm text-white/75">{h.dia}</span>
