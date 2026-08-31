@@ -78,6 +78,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { href: '#inicio', label: 'Início' },
+                { href: '#exclusivo', label: 'Exclusivo' },
                 { href: '#sobre', label: 'Sobre' },
                 { href: '#servicos', label: 'Serviços' },
                 { href: '#catalogo', label: 'Catálogo' },
@@ -103,14 +104,6 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/cursos-presenciais"
-                  className="font-raleway text-sm text-white/65 hover:text-[#d4a0a0] transition-colors"
-                >
-                  Cursos Presenciais
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/clube-lash"
                   className="font-raleway text-sm text-white/65 hover:text-[#d4a0a0] transition-colors"
                 >
@@ -122,7 +115,7 @@ export default function Footer() {
                   href="/produtos-digitais"
                   className="font-raleway text-sm text-white/65 hover:text-[#d4a0a0] transition-colors"
                 >
-                  Produtos Digitais
+                  Beauty Academy
                 </Link>
               </li>
             </ul>

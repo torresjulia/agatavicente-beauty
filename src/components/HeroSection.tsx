@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32 pt-40">
         {/* Eyebrow */}
         <p className="font-raleway text-xs tracking-[0.4em] uppercase text-[#c9a84c] mb-6 opacity-80">
-          Estúdio de Beleza Premium
+          Estúdio · Academy · Clube
         </p>
 
         {/* Main title */}
@@ -28,17 +28,19 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <p className="font-raleway text-base sm:text-lg text-white/82 max-w-2xl mx-auto mb-10 leading-relaxed font-light tracking-wide">
-          Realçamos a beleza do seu olhar.
-          Somos especialistas em embelezamento do olhar, com técnicas que unem precisão, cuidado e exclusividade. Extensão de Cílios, Design de Sobrancelhas, Brow Lamination e Lash Lifting para valorizar a sua beleza e revelar a sua melhor versão.
+          Referência em embelezamento do olhar e em educação profissional na área da beleza.
+          No estúdio, cuidamos de você com técnicas premium. Na Academy, ensinamos o que
+          aplicamos no dia a dia. No Clube Lash, assine planos mensais dos nossos serviços com
+          prioridade no agendamento e benefícios exclusivos.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
-            href="#catalogo"
+            href="#exclusivo"
             className="font-raleway text-sm tracking-[0.15em] uppercase px-8 py-4 bg-gradient-to-r from-[#d4a0a0] to-[#c9a84c] text-[#0a0a0a] font-medium hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
-            Ver Catálogo
+            Academy &amp; Clube
           </a>
           <a
             href={whatsappHref}
@@ -86,12 +88,16 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none z-[1]" />
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 z-10">
+      <a
+        href="#exclusivo"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-80 transition-opacity z-10"
+        aria-label="Ir para Clube Lash e Beauty Academy"
+      >
         <div className="w-px h-8 bg-gradient-to-b from-transparent to-[#c9a84c] animate-pulse" />
         <p className="font-raleway text-[10px] tracking-[0.3em] uppercase text-[#c9a84c]">
-          Scroll
+          Exclusivo
         </p>
-      </div>
+      </a>
     </section>
   )
 }

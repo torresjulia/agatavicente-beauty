@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import QuemSou from '../../public/quem-sou.jpeg'
 
 const diferenciais = [
@@ -6,7 +5,7 @@ const diferenciais = [
     icon: '✦',
     title: 'Técnica Avançada',
     description:
-      'Formação contínua nas mais modernas técnicas do mercado de beleza, garantindo resultados precisos e duradouros.',
+      'Formação contínua nas mais modernas técnicas do mercado — aplicadas no estúdio e ensinadas na Beauty Academy com o mesmo rigor.',
   },
   {
     icon: '◈',
@@ -16,9 +15,9 @@ const diferenciais = [
   },
   {
     icon: '◇',
-    title: 'Atendimento Exclusivo',
+    title: 'Formação Profissional',
     description:
-      'Cada cliente recebe atenção individualizada, com horários espaçados para garantir total conforto e privacidade.',
+      'Cursos presenciais, infoprodutos e materiais digitais para profissionais que querem elevar sua técnica com quem vive o mercado.',
   },
   {
     icon: '✧',
@@ -79,6 +78,12 @@ export default function SobreSection() {
               Meu atendimento acontece em estúdio privativo, com agenda exclusiva e insumos importados de alta qualidade, proporcionando uma experiência segura, sofisticada e personalizada.
             </p>
             <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
+              Além do estúdio, compartilho tudo o que aprendo na prática na Agata Vicente Beauty Academy — com infoprodutos e cursos presenciais — porque ensinar com autenticidade é parte da minha missão.
+            </p>
+            <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
+              Para quem quer cuidar da beleza com regularidade, criei o Clube Lash: planos mensais com manutenções, prioridade no agendamento e benefícios exclusivos nos serviços do estúdio.
+            </p>
+            <p className="font-raleway text-white/82 leading-relaxed mb-5 font-light">
               Porque investir em si é escolher se cuidar, e você merece o melhor.
             </p>
           </div>
@@ -103,7 +108,7 @@ export default function SobreSection() {
         </div>
       </div>
 
-      {/* Ponte de marca → Clube Lash */}
+      {/* Imagem de marca */}
       <figure className="relative w-full h-[62vh] sm:h-[70vh] lg:h-[78vh]">
         <img
           src="/images/onça-clara.jpeg"
@@ -117,16 +122,10 @@ export default function SobreSection() {
           <p className="font-raleway text-[10px] sm:text-xs tracking-[0.35em] uppercase text-[#c9a84c] mb-3">
             Universo da marca
           </p>
-          <p className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-5">
+          <p className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-light text-white">
             Força, elegância e{' '}
             <em className="gradient-rose-gold not-italic">olhar</em>
           </p>
-          <Link
-            href="/clube-lash"
-            className="inline-block font-raleway text-xs tracking-[0.15em] uppercase text-white/80 border-b border-[#c9a84c]/50 pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors"
-          >
-            Conheça o Clube Lash
-          </Link>
         </figcaption>
       </figure>
     </section>

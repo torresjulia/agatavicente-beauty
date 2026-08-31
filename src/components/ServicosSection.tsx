@@ -29,7 +29,7 @@ const servicos = [
   {
     titulo: 'Brow Lamination',
     descricao:
-      'Técnica que alinha, levanta e fixa os fios naturais da sobrancelha, criando um efeito fuller brow denso e estruturado por até 8 semanas.',
+      'Técnica que alinha, levanta e fixa os fios naturais da sobrancelha, criando um efeito fuller brow denso e estruturado por 20 a 30 dias.',
     categoria: 'Sobrancelhas',
     destaque: false,
     emoji: '◈',

@@ -2,65 +2,134 @@ import type { Metadata } from 'next'
 import NavbarSimples from '@/components/NavbarSimples'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import Footer from '@/components/Footer'
+import CursosPresenciaisSection from '@/components/academy/CursosPresenciaisSection'
+import { WHATSAPP_HREF } from '@/data/cursosPresenciais'
 
 export const metadata: Metadata = {
-  title: 'Produtos Digitais — Aprenda com quem é referência em beleza',
+  title: 'Agata Vicente Beauty Academy — Infoprodutos e Cursos Presenciais',
   description:
-    'E-books e guias profissionais de sobrancelhas, brow lamination e lash lifting. Aprenda com a especialista Agata Vicente e eleve seu nível técnico.',
+    'Apostilas editáveis 100%, formação presencial VIP em extensão de cílios, design de sobrancelhas, lash lifting e brow lamination com Agata Vicente.',
 }
 
 const produtos = [
   {
-    imagem: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80',
-    nome: 'E-book Design Perfeito de Sobrancelha',
+    imagem: '/images/apostila-extensao-cilios.jpeg',
+    nome: 'Apostila de Extensão de Cílios Completa',
     descricao:
-      'O guia completo para dominar as técnicas de mapeamento e design de sobrancelhas. Do básico ao avançado.',
+      'Técnica fio a fio e fios tecnológicos em apostila 100% editável — ideal para estudar, aplicar no seu estúdio ou montar seu próprio curso.',
     beneficios: [
-      'Mapeamento facial com precisão milimétrica',
-      'Técnicas de design para cada formato de rosto',
-      'Erros mais comuns e como evitá-los',
-      'Escolha de produtos e materiais',
-      'Passo a passo ilustrado com fotos reais',
+      'Técnica fio a fio do básico ao avançado',
+      'Fios tecnológicos: Volume Brasileiro, Egípcio, 5D, 6D e 8D',
+      'Conteúdo completo para ensinar ou se especializar',
+      'Arquivo 100% editável — personalize com a sua marca',
+      'Material profissional pronto para uso',
     ],
-    preco: 'R$ 47',
-    badge: 'E-book PDF',
+    badge: 'Apostila Editável',
     badgeColor: 'from-[#d4a0a0] to-[#c9a84c]',
-    cta: 'Comprar E-book',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/sNxvg3V',
   },
   {
-    imagem: 'https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&q=80',
-    nome: 'Curso Online Brow Lamination do Zero',
+    imagem: '/images/apostila-editavel-lashlifting.jpeg',
+    nome: 'Apostila Completa Editável — Lash Lifting',
     descricao:
-      'Formação completa na técnica de brow lamination — do alinhamento ao acabamento perfeito, do iniciante ao profissional.',
+      'Apostila com o passo a passo para você dominar e ensinar a técnica de Lash Lifting do zero!',
     beneficios: [
-      '+6 horas de videoaulas em HD',
-      'Teoria + prática passo a passo',
-      'Lista completa de materiais',
-      'Certificado de conclusão',
-      'Suporte via grupo exclusivo',
-      'Atualizações vitalícias',
+      'Passo a passo completo da técnica',
+      'Do zero ao atendimento profissional',
+      'Ideal para quem quer ensinar lash lifting',
+      'Arquivo 100% editável',
+      'Conteúdo direto e aplicável no dia a dia',
     ],
-    preco: 'R$ 297',
-    badge: 'Curso Online',
+    badge: 'Apostila Editável',
     badgeColor: 'from-[#c9a84c] to-[#d4a0a0]',
-    cta: 'Comprar Curso',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/6tmvc90',
   },
   {
-    imagem: 'https://images.unsplash.com/photo-1601412436009-d964bd02edbc?w=600&q=80',
-    nome: 'Guia Completo de Lash Lifting',
+    imagem: '/images/apostila-curso-design-sobrancelha.jpeg',
+    nome: 'Apostila para Curso de Design de Sobrancelha',
     descricao:
-      'Tudo o que você precisa saber para executar o lash lifting com segurança, precisão e resultados duradouros.',
+      'Apostila completa com conteúdo para design personalizado e aplicação de henna — 100% editável para o seu curso ou estudo.',
     beneficios: [
-      'Anatomia e cuidados com os cílios',
-      'Escolha do kit e dos produtos ideais',
-      'Passo a passo da técnica completa',
-      'Como tratar casos difíceis',
-      'Ficha de anamnese pronta para usar',
+      'Design personalizado e mapeamento facial',
+      'Técnica de aplicação de henna',
+      'Conteúdo completo para montar seu curso',
+      'Arquivo 100% editável',
+      'Material profissional pronto para uso',
     ],
-    preco: 'R$ 97',
-    badge: 'Guia PDF',
+    badge: 'Apostila Editável',
     badgeColor: 'from-[#5c3d2e] to-[#c9a84c]',
-    cta: 'Comprar Guia',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/KBKRJj6',
+  },
+  {
+    imagem: '/images/jornal-personalizado.jpeg',
+    nome: 'Jornal Personalizado 100% Editável',
+    descricao:
+      'Jornal personalizado para você arrasar na autenticidade do seu estúdio — personalize com a sua marca e encante suas clientes.',
+    beneficios: [
+      '100% editável com a identidade do seu estúdio',
+      'Transmita autenticidade e profissionalismo',
+      'Ideal para recepção, atendimento ou redes sociais',
+      'Pronto para personalizar e usar',
+      'Destaque-se com um material exclusivo',
+    ],
+    badge: 'Jornal Editável',
+    badgeColor: 'from-[#d4a0a0] to-[#5c3d2e]',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/93ZP4Kn',
+  },
+  {
+    imagem: '/images/catalogo-moderno-personalizavel.jpeg',
+    nome: 'Catálogo Moderno Personalizável',
+    descricao:
+      'Catálogo moderno personalizável para elevar o nível dos seus agendamentos — apresente seus serviços com elegância e profissionalismo.',
+    beneficios: [
+      'Layout moderno e sofisticado',
+      '100% personalizável com a sua marca',
+      'Ideal para enviar no WhatsApp ou redes sociais',
+      'Valorize seus serviços e aumente conversões',
+      'Pronto para editar e compartilhar',
+    ],
+    badge: 'Catálogo Editável',
+    badgeColor: 'from-[#c9a84c] to-[#d4a0a0]',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/RghxmPZ',
+  },
+  {
+    imagem: '/images/cilios3.jpeg',
+    nome: 'Pack Lash — Conteúdos Didáticos e Ilustrativos',
+    descricao:
+      'Pack completo com conteúdos didáticos e ilustrativos para cursos e materiais de extensão de cílios — tudo para enriquecer suas aulas.',
+    beneficios: [
+      'Conteúdos didáticos prontos para uso',
+      'Ilustrações profissionais para aulas e apostilas',
+      'Ideal para montar cursos de extensão de cílios',
+      'Material visual de alta qualidade',
+      'Agilize a produção dos seus materiais',
+    ],
+    badge: 'Pack Didático',
+    badgeColor: 'from-[#d4a0a0] to-[#c9a84c]',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/uTKnS4e',
+  },
+  {
+    imagem: '/demoKitECertificado.jpeg',
+    nome: 'Folhas de Treino — Design de Sobrancelhas e Extensão de Cílios',
+    descricao:
+      'Folhas de treino para cursos de design de sobrancelhas e extensão de cílios, sem logo de marca — prontas para personalizar e usar nas suas aulas.',
+    beneficios: [
+      'Folhas para design de sobrancelhas e extensão de cílios',
+      'Sem logo de marca — total liberdade para personalizar',
+      'Ideal para aulas práticas e cursos presenciais',
+      'Material didático profissional',
+      'Pronto para imprimir ou usar digitalmente',
+    ],
+    badge: 'Material Didático',
+    badgeColor: 'from-[#5c3d2e] to-[#d4a0a0]',
+    cta: 'Comprar agora',
+    link: 'https://pay.kiwify.com.br/yJPL0vy',
   },
 ]
 
@@ -69,42 +138,55 @@ const depoimentosAlunas = [
     nome: 'Priscila Mendes',
     texto:
       'O curso de Brow Lamination mudou minha carreira. Em 3 semanas após concluir já estava atendendo clientes e me pagando em menos de 2 meses.',
-    avatar: 'https://ui-avatars.com/api/?name=Priscila+Mendes&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
+    avatar:
+      'https://ui-avatars.com/api/?name=Priscila+Mendes&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
   },
   {
     nome: 'Beatriz Oliveira',
     texto:
-      'Comprei o e-book de sobrancelhas achando que já sabia tudo e aprendi técnicas que jamais vira em outros cursos. Vale cada centavo, muito mais do que o preço.',
-    avatar: 'https://ui-avatars.com/api/?name=Beatriz+Oliveira&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
+      'A apostila de sobrancelhas é completa e muito bem estruturada. O fato de ser editável fez toda diferença — personalizei com a minha marca e já uso nas minhas aulas.',
+    avatar:
+      'https://ui-avatars.com/api/?name=Beatriz+Oliveira&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
   },
   {
     nome: 'Vanessa Costa',
     texto:
-      'O guia de lash lifting tem fotos, explicações detalhadas e fichas prontas para usar. A didática da Agata é incrível — uso no meu estúdio todo dia.',
-    avatar: 'https://ui-avatars.com/api/?name=Vanessa+Costa&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
+      'A apostila de lash lifting tem o passo a passo que eu precisava. Conteúdo direto, fácil de seguir e pronto para ensinar — a didática da Agata transparece em cada página.',
+    avatar:
+      'https://ui-avatars.com/api/?name=Vanessa+Costa&background=d4a0a0&color=0a0a0a&size=80&bold=true&font-size=0.4',
   },
 ]
 
 const faqs = [
   {
-    pergunta: 'Como recebo o produto após a compra?',
+    pergunta: 'Como recebo a apostila após a compra?',
     resposta:
-      'Imediatamente após a confirmação do pagamento você recebe o acesso por e-mail. E-books e guias ficam disponíveis para download em PDF; cursos ficam em uma área de membros exclusiva.',
+      'Após a confirmação do pagamento na Kiwify, você recebe o acesso por e-mail para download do arquivo. As apostilas são em PDF 100% editáveis, prontas para personalizar e usar.',
   },
   {
-    pergunta: 'Preciso ter experiência prévia para comprar os produtos?',
+    pergunta: 'Preciso ter experiência prévia para comprar os infoprodutos?',
     resposta:
       'Não. Todos os materiais foram criados com linguagem acessível e começam do básico. Tanto iniciantes quanto profissionais que querem aprimorar a técnica se beneficiam do conteúdo.',
   },
   {
-    pergunta: 'Por quanto tempo tenho acesso ao curso?',
+    pergunta: 'O que significa apostila 100% editável?',
     resposta:
-      'O acesso ao curso é vitalício, incluindo todas as atualizações futuras. Uma vez comprado, é seu para sempre.',
+      'Você recebe o arquivo em formato editável para adaptar o conteúdo com a sua marca, incluir seus dados ou usar como material didático nos seus próprios cursos — sem precisar criar tudo do zero.',
   },
   {
-    pergunta: 'E se eu não gostar do produto?',
+    pergunta: 'E se eu não gostar do infoproduto?',
     resposta:
       'Você tem 7 dias corridos após a compra para solicitar o reembolso integral, sem necessidade de justificativa. Basta enviar um e-mail ou mensagem no WhatsApp.',
+  },
+  {
+    pergunta: 'Como funciona a inscrição nos cursos presenciais?',
+    resposta:
+      'Entre em contato pelo WhatsApp para consultar valores, datas das próximas turmas e garantir sua vaga. As turmas são pequenas para garantir atenção individualizada e prática em modelo real.',
+  },
+  {
+    pergunta: 'Qual a diferença entre apostila e curso presencial?',
+    resposta:
+      'As apostilas são materiais digitais editáveis para estudar no seu ritmo, com acesso imediato após a compra na Kiwify. Os cursos presenciais são formações VIP de um dia, com prática em modelo, diploma, materiais e suporte direto com a Agata.',
   },
 ]
 
@@ -114,13 +196,12 @@ export default function ProdutosDigitaisPage() {
       <NavbarSimples />
 
       <main className="bg-[#0a0a0a] min-h-screen">
-        {/* Hero */}
         <section className="relative pt-32 pb-20 bg-[#0a0a0a] overflow-hidden leopard-subtle">
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none z-[1]" />
 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <span className="inline-block font-raleway text-xs tracking-[0.4em] uppercase text-[#c9a84c] mb-6">
-              Educação em Beleza
+              Agata Vicente Beauty Academy
             </span>
             <h1 className="font-cormorant text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-tight mb-6">
               Aprenda com quem é{' '}
@@ -129,33 +210,46 @@ export default function ProdutosDigitaisPage() {
               em beleza
             </h1>
             <div className="gold-divider max-w-32 mx-auto my-6" />
-            <p className="font-raleway text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-              Mais de 5 anos de experiência condensados em materiais didáticos de altíssima
-              qualidade. Acelere sua carreira com quem vive o mercado de beleza todos os dias.
+            <p className="font-raleway text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed mb-10">
+              Apostilas 100% editáveis para estudar no seu ritmo ou formação presencial VIP com
+              prática em modelo. Escolha o formato ideal para o seu momento.
             </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="#infoprodutos"
+                className="font-raleway text-xs tracking-[0.12em] uppercase px-6 py-3 bg-gradient-to-r from-[#d4a0a0] to-[#c9a84c] text-[#0a0a0a] hover:opacity-90 transition-opacity w-full sm:w-auto"
+              >
+                Ver infoprodutos
+              </a>
+              <a
+                href="#presencial"
+                className="font-raleway text-xs tracking-[0.12em] uppercase px-6 py-3 border border-[#c9a84c]/40 text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a0a0a] transition-colors w-full sm:w-auto"
+              >
+                Ver cursos presenciais
+              </a>
+            </div>
           </div>
         </section>
 
-        {/* Produtos */}
-        <section className="py-20 bg-[#080808]">
+        <section id="infoprodutos" className="py-20 bg-[#080808] scroll-mt-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <p className="font-raleway text-xs tracking-[0.35em] uppercase text-[#c9a84c] mb-4">
-                Produtos
+                Infoprodutos
               </p>
               <h2 className="font-cormorant text-4xl text-white font-light">
-                Escolha o seu{' '}
-                <em className="gradient-rose-gold not-italic">material</em>
+                Estude no seu{' '}
+                <em className="gradient-rose-gold not-italic">ritmo</em>
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {produtos.map((p) => (
                 <div
                   key={p.nome}
                   className="flex flex-col border border-white/8 bg-[#0f0f0f] overflow-hidden group hover:border-[#c9a84c]/30 transition-colors duration-300"
                 >
-                  {/* Cover image */}
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <img
                       src={p.imagem}
@@ -173,7 +267,6 @@ export default function ProdutosDigitaisPage() {
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="p-7 flex flex-col flex-1">
                     <h3 className="font-cormorant text-2xl text-white font-medium mb-3 leading-tight">
                       {p.nome}
@@ -193,24 +286,14 @@ export default function ProdutosDigitaisPage() {
 
                     <div className="gold-divider mb-5" />
 
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="font-raleway text-xs text-white/55 uppercase tracking-wide">
-                          Por apenas
-                        </p>
-                        <p className="font-cormorant text-3xl text-[#c9a84c] font-light">
-                          {p.preco}
-                        </p>
-                      </div>
-                      <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-raleway text-xs tracking-[0.12em] uppercase px-5 py-3 bg-gradient-to-r from-[#d4a0a0] to-[#c9a84c] text-[#0a0a0a] hover:opacity-90 transition-opacity font-semibold"
-                      >
-                        Comprar agora
-                      </a>
-                    </div>
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-full font-raleway text-xs tracking-[0.12em] uppercase px-5 py-3 bg-gradient-to-r from-[#d4a0a0] to-[#c9a84c] text-[#0a0a0a] hover:opacity-90 transition-opacity font-semibold"
+                    >
+                      {p.cta}
+                    </a>
                   </div>
                 </div>
               ))}
@@ -218,7 +301,6 @@ export default function ProdutosDigitaisPage() {
           </div>
         </section>
 
-        {/* Garantia */}
         <section className="py-16 bg-[#0a0a0a]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border border-[#c9a84c]/30 bg-gradient-to-br from-[#1a1208] to-[#0f0f0f] p-10 text-center">
@@ -228,8 +310,8 @@ export default function ProdutosDigitaisPage() {
               </h2>
               <div className="gold-divider max-w-24 mx-auto mb-5" />
               <p className="font-raleway text-base text-white/80 leading-relaxed">
-                Se não gostar do produto por qualquer motivo, devolvemos 100% do seu dinheiro.
-                Sem questionamentos, sem burocracia. Sua satisfação é nossa responsabilidade.
+                Nos infoprodutos, se não gostar do material por qualquer motivo, devolvemos 100%
+                do seu dinheiro. Sem questionamentos, sem burocracia.
               </p>
               <p className="font-raleway text-xs text-[#c9a84c] mt-4 tracking-wide">
                 Válido por 7 dias corridos após a compra
@@ -238,7 +320,6 @@ export default function ProdutosDigitaisPage() {
           </div>
         </section>
 
-        {/* Depoimentos de alunas */}
         <section className="py-20 bg-[#080808] relative overflow-hidden leopard-subtle">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
@@ -247,16 +328,13 @@ export default function ProdutosDigitaisPage() {
               </p>
               <h2 className="font-cormorant text-4xl text-white font-light">
                 O que dizem nossas{' '}
-                <em className="gradient-rose-gold not-italic">alunas</em>
+                <em className="gradient-rose-gold not-italic">alunas online</em>
               </h2>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {depoimentosAlunas.map((d) => (
-                <div
-                  key={d.nome}
-                  className="border border-white/8 bg-[#0f0f0f] p-6"
-                >
+                <div key={d.nome} className="border border-white/8 bg-[#0f0f0f] p-6">
                   <div className="flex gap-1 mb-4" aria-label="5 estrelas">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <svg
@@ -291,7 +369,8 @@ export default function ProdutosDigitaisPage() {
           </div>
         </section>
 
-        {/* FAQ */}
+        <CursosPresenciaisSection />
+
         <section className="py-20 bg-[#0a0a0a]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -306,10 +385,7 @@ export default function ProdutosDigitaisPage() {
 
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div
-                  key={faq.pergunta}
-                  className="border border-white/8 bg-[#0f0f0f] p-6"
-                >
+                <div key={faq.pergunta} className="border border-white/8 bg-[#0f0f0f] p-6">
                   <h3 className="font-cormorant text-lg text-white font-medium mb-3">
                     {faq.pergunta}
                   </h3>
@@ -322,18 +398,17 @@ export default function ProdutosDigitaisPage() {
           </div>
         </section>
 
-        {/* CTA Final */}
-        <section className="py-16 bg-[#080808]">
-          <div className="max-w-2xl mx-auto px-4 text-center">
-            <p className="font-cormorant text-3xl text-white font-light mb-4">
-              Dúvidas sobre os produtos?
+        <section className="py-16 bg-[#080808] leopard-subtle relative">
+          <div className="max-w-2xl mx-auto px-4 text-center relative z-10">
+            <p className="font-cormorant text-3xl sm:text-4xl text-white font-light mb-4">
+              Dúvidas sobre a Academy?
             </p>
-            <p className="font-raleway text-sm text-white/75 mb-8">
-              Fale comigo pelo WhatsApp antes de comprar. Estou aqui para te ajudar a escolher o
-              material certo para o seu momento.
+            <p className="font-raleway text-sm text-white/75 mb-8 leading-relaxed">
+              Fale comigo pelo WhatsApp para escolher o infoproduto ideal ou garantir sua vaga em
+              um curso presencial. Estou aqui para te ajudar.
             </p>
             <a
-              href="https://wa.me/message/J6BWH3D6F3TQC1"
+              href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white font-raleway text-sm tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#20b85a] transition-colors"

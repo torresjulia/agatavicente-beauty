@@ -15,6 +15,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#inicio', label: 'Início' },
+    { href: '#exclusivo', label: 'Exclusivo', highlight: true },
     { href: '#sobre', label: 'Sobre' },
     { href: '#servicos', label: 'Serviços' },
     { href: '#catalogo', label: 'Catálogo' },
@@ -62,7 +63,11 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleAnchorClick(e, link.href)}
-                className="font-raleway text-sm tracking-[0.1em] uppercase text-white/88 hover:text-[#d4a0a0] transition-colors duration-200"
+                className={`font-raleway text-sm tracking-[0.1em] uppercase transition-colors duration-200 ${
+                  'highlight' in link && link.highlight
+                    ? 'text-[#c9a84c] hover:text-[#d4a0a0] relative after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-[#d4a0a0] after:to-[#c9a84c]'
+                    : 'text-white/88 hover:text-[#d4a0a0]'
+                }`}
               >
                 {link.label}
               </a>
@@ -71,12 +76,6 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/cursos-presenciais"
-              className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-2 border border-white/20 text-white/80 hover:bg-white hover:text-[#0a0a0a] transition-all duration-200 rounded-none"
-            >
-              Cursos Presenciais
-            </Link>
             <Link
               href="/clube-lash"
               className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-2 border border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a0a0a] transition-all duration-200 rounded-none"
@@ -87,7 +86,7 @@ export default function Navbar() {
               href="/produtos-digitais"
               className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-2 bg-[#d4a0a0]/20 border border-[#d4a0a0]/40 text-[#d4a0a0] hover:bg-[#d4a0a0] hover:text-[#0a0a0a] transition-all duration-200 rounded-none"
             >
-              Produtos Digitais
+              Beauty Academy
             </Link>
           </div>
 
@@ -132,19 +131,16 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleAnchorClick(e, link.href)}
-              className="font-raleway text-sm tracking-[0.1em] uppercase text-white/88 hover:text-[#d4a0a0] transition-colors py-3 border-b border-white/5"
+              className={`font-raleway text-sm tracking-[0.1em] uppercase transition-colors py-3 border-b border-white/5 ${
+                'highlight' in link && link.highlight
+                  ? 'text-[#c9a84c] hover:text-[#d4a0a0]'
+                  : 'text-white/88 hover:text-[#d4a0a0]'
+              }`}
             >
               {link.label}
             </a>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <Link
-              href="/cursos-presenciais"
-              onClick={() => setMenuOpen(false)}
-              className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-3 border border-white/20 text-white/80 text-center hover:bg-white hover:text-[#0a0a0a] transition-all duration-200"
-            >
-              Cursos Presenciais
-            </Link>
             <Link
               href="/clube-lash"
               onClick={() => setMenuOpen(false)}
@@ -157,7 +153,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="font-raleway text-xs tracking-[0.08em] uppercase px-4 py-3 bg-[#d4a0a0]/20 border border-[#d4a0a0]/40 text-[#d4a0a0] text-center hover:bg-[#d4a0a0] hover:text-[#0a0a0a] transition-all duration-200"
             >
-              Produtos Digitais
+              Beauty Academy
             </Link>
           </div>
         </nav>
